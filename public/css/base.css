@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
+
+body {
+    margin: 0;
+    height: 100%;
+    background: url("../img/bkgd.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+/* HOMEPAGE */
+.homepage-central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    color: white;
+}
+
+.homepage-left {
+    padding-right: 3rem;
+}
+
+.homepage-central a, .social a {
+    color: white;
+    opacity: .7;
+
+    text-shadow: 0px 3px 6px 0px black;
+
+
+    transition: opacity 0.1s ease-in-out;
+}
+
+.homepage-central a:hover, .social a:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.homepage-central h1 {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.homepage-central h2 {
+    font-weight: 300;
+}
+
+#logoimghome {
+    height: 250px;
+    width: auto;
+}
+
+.bull {
+    opacity: 0.7;
+}
+
+.social {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.social img {
+    padding: 0 10px;
+    text-shadow: 0px 3px 6px 0px black;
+    height: 40px;
+    width: auto;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    margin: 0;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+}
+
+header ul {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+header ul li {
+    padding: 0px 10px;
+    display: inline-block;
+}
+
+header img {
+    height: 30px;
+    width: auto;
+    vertical-align: middle;
+}
+
+header a {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 400;
+    text-decoration: none;
+    opacity: .8;
+    transition: opacity .5s;
+}
+
+header a.active {
+    opacity: 1;
+}
+
+header a:hover {
+    opacity: 1;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* CONTAINER */
+.content {
+    border-radius: 15px;
+    margin-top: 100px;
+    /*padding: 20px;*/
+    background-color: rgba(255, 255, 255, .8);
+}
+
+/* MISC */
+#gallery {
+    margin-top: 76px;
+}
+
+/* Customize color of the justified gallery loading indicator */
+.justified-gallery > .jg-spinner > span {
+    background-color: #FFFFFF;
+}
+
+/* MOBILE */
+@media screen and (max-width: 750px){
+    .homepage-central {
+        display: block;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    .homepage-left {
+        padding: 0;
+    }
+
+    .homepage-right {
+        padding-top: 4rem;
+        text-align: center;
+    }
+}

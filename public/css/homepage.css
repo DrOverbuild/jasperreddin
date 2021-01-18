@@ -1,0 +1,138 @@
+body {
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#main {
+    display: table;
+}
+
+.column {
+    float: left;
+}
+
+#logo {
+    padding-right: 40px;
+}
+
+#logo:hover {
+    transition: opacity .5s;
+}
+
+#right {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.social img, .links img {
+    padding: 0 10px;
+    text-shadow: 0px 3px 6px 0px black;
+    height: 40px;
+    width: auto;
+}
+
+.op {
+    opacity: .7;
+    transition: opacity .5s;
+}
+
+.op:hover {
+    opacity: 1;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 700;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 300;
+    margin: 0px;
+}
+
+/* EMBED IMAGE LINKS IN TITLE */
+
+.links {
+    display: flex;
+}
+
+.links a {
+    display: flex;
+}
+
+.links a img {
+    margin: auto;
+    height: 35px;
+}
+
+@media screen and (max-width: 1000px){
+    #main {
+        display: block;
+        text-align: center;
+    }
+
+    h1 {
+        display: block;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    h2 {
+        display: block;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #right {
+        width: 100%;
+        text-align: center;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .bull {
+        display: none;
+    }
+
+    #logoimg {
+        width: 200px;
+        height: 200px;
+    }
+
+    .social img {
+        height: 30px;
+    }
+
+    .links {
+        display: block;
+    }
+
+    .links a {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    #logo {
+        float: none;
+        padding-right: 0;
+    }
+}

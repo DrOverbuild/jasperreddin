@@ -1,0 +1,7 @@
+<navigation active="'photography'"></navigation>
+
+<div id="gallery">
+    <a ng-repeat="img in portfolio" href="{{img.url}}" on-finish-render class="colorbox-img" title="{{img.caption}}">
+        <img alt="{{img.caption}}" src="{{img.thumbnail}}"/>
+    </a>
+</div>

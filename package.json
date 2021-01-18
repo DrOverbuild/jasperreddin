@@ -1,0 +1,20 @@
+{
+  "name": "jasperreddin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "http-server -p 8000 ./public",
+    "test": "node src/index.js",
+    "bundle": "browserify -r flickr-sdk > ./public/js/flickr-sdk-bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  },
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "flickr-sdk": "^3.10.0"
+  }
+}

@@ -1,0 +1,136 @@
+/*header {*/
+/*    width: 100%;*/
+/*    background-color: rgba(0, 0, 0, .6);*/
+/*    margin: 0;*/
+/*    position: fixed;*/
+/*    top: 0px;*/
+/*    left: 0px;*/
+/*    z-index: 99;*/
+/*}*/
+
+/*header ul {*/
+/*    margin: auto;*/
+/*    text-align: center;*/
+/*    padding: 20px;*/
+/*    !*display: flex;*!*/
+/*    !*flex-direction: column;*!*/
+/*}*/
+
+/*header ul li {*/
+/*    !*display: flex;*! !* this works on mobile*/
+/*    !*flex-direction: column;*!*/
+/*    padding: 0px 10px;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*header img {*/
+/*    height: 30px;*/
+/*    width: auto;*/
+/*    vertical-align: middle;*/
+/*}*/
+
+/*header a {*/
+/*    color: white;*/
+/*    font-size: 1.5em;*/
+/*    font-weight: 400;*/
+/*    text-decoration: none;*/
+/*    opacity: .8;*/
+/*    transition: opacity .5s;*/
+/*}*/
+
+/*header a.active {*/
+/*    opacity: 1;*/
+/*}*/
+
+/*header a:hover {*/
+/*    opacity: 1;*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*main {*/
+/*    border-radius: 15px;*/
+/*    max-width: 800px;*/
+/*    margin: 100px auto auto;*/
+/*    padding: 20px;*/
+/*    background-color: rgba(255, 255, 255, .8);*/
+/*}*/
+
+/*h1 {*/
+/*    text-align: center;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+/*h2 {*/
+/*    font-weight: 400;*/
+/*}*/
+
+/*#content {*/
+/*    padding: 0px 50px;*/
+/*}*/
+
+/*#content a {*/
+/*    color: black;*/
+/*    text-decoration: none;*/
+/*    font-weight: 700;*/
+/*    opacity: .5;*/
+/*    transition: opacity .5s;*/
+/*}*/
+
+/*#content a:hover{*/
+/*   opacity: 1;*/
+/*}*/
+
+/*strong {*/
+/*    font-weight: 500;*/
+/*}*/
+
+/*.videoWrapper {*/
+/*    position: relative;*/
+/*    padding-bottom: 56.25%; !* 16:9 *!*/
+/*    padding-top: 25px;*/
+/*    height: 0;*/
+/*}*/
+/*.videoWrapper iframe {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+
+/*#mobilenav {*/
+/*    display: none;*/
+/*}*/
+
+/*#home {*/
+/*    display: none;*/
+/*}*/
+
+/*@media screen and (max-width: 1000px){*/
+/*    #mobilenav {*/
+/*        display: block;*/
+/*    }*/
+
+/*    #nav {*/
+/*        display: none;*/
+/*    }*/
+
+/*    #nav li {*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        padding-bottom: 10px;*/
+/*    }*/
+
+/*    #logo {*/
+/*        display: inline;*/
+/*    }*/
+
+/*    #logoimg {*/
+/*        display: none;*/
+/*    }*/
+
+/*    #home {*/
+/*        display: inline;*/
+/*    }*/
+/*}*/
