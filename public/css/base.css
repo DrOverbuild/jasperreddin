@@ -133,6 +133,10 @@ header a:hover {
     margin-top: 76px;
 }
 
+#loadErr {
+	margin-top: 100px;
+}
+
 /* Customize color of the justified gallery loading indicator */
 .justified-gallery > .jg-spinner > span {
     background-color: #FFFFFF;

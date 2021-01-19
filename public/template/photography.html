@@ -1,7 +1,11 @@
 <navigation active="'photography'"></navigation>
 
-<div id="gallery">
+<div id="gallery" ng-show="!loadErr">
     <a ng-repeat="img in portfolio" href="{{img.url}}" on-finish-render class="colorbox-img" title="{{img.caption}}">
-        <img alt="{{img.caption}}" src="{{img.thumbnail}}"/>
+        <img alt="{{img.caption}}" src="{{img.thumbnail}}" width="{{img.thumb_w}}" height="{{img.thumb_h}}"/>
     </a>
+</div>
+
+<div id="loadErr" ng-show="loadErr" class="text-center text-white">
+	<p>Unfortunately, there was an issue loading all of the photos.</p>
 </div>
