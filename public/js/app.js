@@ -4,7 +4,8 @@
 	app.config(function ($routeProvider) {
 		$routeProvider
 		.when('/music', {
-			templateUrl: "template/music.html"
+			templateUrl: "template/music.html",
+			controller: "musicController"
 		})
 		.when('/photography', {
 			templateUrl: "template/photography.html",
@@ -137,5 +138,8 @@
 		$scope.nextPage();
 	});
 
+	app.controller('musicController', function($scope) {
+		
+	});
 
 })();
