@@ -136,8 +136,8 @@ header a:hover {
 
 .music-gallery-item {
 	flex-grow: 1;
-	flex-basis: 33%;
-	height: 250px;
+	flex-basis: 25%;
+	height: 25vw;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -201,7 +201,14 @@ header a:hover {
     background-color: #FFFFFF;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
+@media screen and (max-width: 1200px) {
+    .music-gallery-item {
+        flex-basis: 33%;
+        height: 33vw;
+    }
+}
+
 @media screen and (max-width: 750px){
     .homepage-central {
         display: block;
@@ -216,5 +223,10 @@ header a:hover {
     .homepage-right {
         padding-top: 4rem;
         text-align: center;
+    }
+
+    .music-gallery-item {
+        flex-basis: 50%;
+        height: 50vw;
     }
 }

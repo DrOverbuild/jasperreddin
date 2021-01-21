@@ -274,7 +274,7 @@
 
 		$scope.embedClicked = function(id) {
 			ytmodal.html(`<iframe id="ytplayer" type="text/html"` +
-		  			`src="https://www.youtube.com/embed/${id}?modestbranding=1&controls=0&autoplay=1"` +
+		  			`src="https://www.youtube.com/embed/${id}?autoplay=1"` +
 					 `frameborder="0"></iframe>`);
 			ytmodal.fadeIn(100);
 		}
