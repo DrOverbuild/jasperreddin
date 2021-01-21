@@ -272,6 +272,12 @@
 			});
 		});
 
+		$scope.hideYtPlayer = function() {
+			ytmodal.fadeOut(100, function() {
+				ytmodal.html('');
+			});
+		}
+
 		$scope.embedClicked = function(id) {
 			ytmodal.html(`<iframe id="ytplayer" type="text/html"` +
 		  			`src="https://www.youtube.com/embed/${id}?autoplay=1"` +
@@ -280,9 +286,14 @@
 		}
 
 		$('#ytmodal').on('click', function (e) {
-			ytmodal.fadeOut(100, function() {
-				ytmodal.html('');
-			});
+			$scope.hideYtPlayer();
+		});
+
+		$(document).keydown(function (e) {
+			if($('#ytplayer')) {
+				e.preventDefault();
+				$scope.hideYtPlayer();
+			}
 		});
 	});
 })();
