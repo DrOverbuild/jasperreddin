@@ -1,80 +1,14 @@
 <navigation active="'music'"></navigation>
 
 <div id="gallery" class="music-gallery" ng-show="!loadErr">
-	<a href="https://www.youtube.com/watch?v=9Kob3vYQ6yQ" class="colorbox-img" title="Cantina Band -- Coffeehouse Lofi Remix">
-		<!-- <img alt="Cantina Band -- Coffeehouse Lofi Remix" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-		<div class="jg-caption music-caption">
-			<div>Cantina Band -- Coffeehouse Lofi Remix</div>
-			<button href="/" class="btn btn-success">Apple Music</button>
-			<button href="/" class="btn btn-success">Spotify</button>
+	<div class="music-gallery-item" ng-repeat="song in music" on-finish-render style="background-image: url({{song.artwork}})">
+		<div class="music-caption" style="display: none">
+			<div>{{song.title}}</div>
+			<div class="music-links">
+				<a class="embedlinks" ng-click="embedClicked(song.ytId)"><img src="/img/social/yt.png"></a>
+				<a href="{{song.appleMusicUrl}}"><img src="/img/social/apple.png"></a>
+				<a href="{{song.spotifyUrl}}"><img src="/img/social/spotify.png"></a>
+			</div>
 		</div>
-	</a>
-
-	<a href="https://youtu.be/CFyarso6tno" class="colorbox-img" title="Red Planet">
-		<!-- <img alt="Red Planet" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/ezGtx-X5MnI" class="colorbox-img" title="Duel of the Keyboards">
-		<!-- <img alt="Duel of the Keyboards" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/ooJlM3GIehM" class="colorbox-img" title="calm down">
-		<!-- <img alt="calm down" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/DL5Q9h6dgAA" class="colorbox-img" title="hint of funk">
-		<!-- <img alt="hint of funk" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/002qTlNG63o" class="colorbox-img" title="Thought">
-		<!-- <img alt="Thought" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/XUlfgJUzGBE" class="colorbox-img" title="Intuition">
-		<!-- <img alt="Intuition" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/dD4ZTrpL7uc" class="colorbox-img" title="Inspiration">
-		<!-- <img alt="Inspiration" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/8c3mmBM80R4" class="colorbox-img" title="Infinity">
-		<!-- <img alt="Infinity" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/dNSgThdQLi8" class="colorbox-img" title="Justice">
-		<!-- <img alt="Justice" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/LVZsyt1nW3Q" class="colorbox-img" title="Time (Five Minutes of Extreme Depression)">
-		<!-- <img alt="Time (Five Minutes of Extreme Depression)" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/K-pviuKzbrE" class="colorbox-img" title="Meaningless">
-		<!-- <img alt="Meaningless" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/PcFPQ6392wY" class="colorbox-img" title="7th">
-		<!-- <img alt="7th" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/U_wcCRk-xfE" class="colorbox-img" title="Rising Tide">
-		<!-- <img alt="Rising Tide" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/gnLwB56Nxvs" class="colorbox-img" title="The First Noel [Piano Cover]">
-		<!-- <img alt="The First Noel [Piano Cover]" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/j9FLijbs47A" class="colorbox-img" title="Placid Synths">
-		<!-- <img alt="Placid Synths" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/jtchSrICwHg" class="colorbox-img" title="Compressed Fir3">
-		<!-- <img alt="Compressed Fir3" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
-
-	<a href="https://youtu.be/EnttmZBAiic" class="colorbox-img" title="Comic Punch">
-		<!-- <img alt="Comic Punch" src="/img/serenade2small.jpg" width="300" height="300"/> -->
-	</a>
+	</div>
 </div>

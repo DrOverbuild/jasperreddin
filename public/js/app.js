@@ -139,7 +139,139 @@
 	});
 
 	app.controller('musicController', function($scope) {
-		
-	});
+		const ytmodal = $('#ytmodal');
 
+		$scope.music = [{
+				title: "Cantina Band -- Coffeehouse Lofi Remix",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "9Kob3vYQ6yQ",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "Red Planet",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "CFyarso6tno",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "Duel of the Keyboards",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "ezGtx-X5MnI",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "calm down",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "ooJlM3GIehM",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "hint of funk",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "DL5Q9h6dgAA",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "Thought",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "002qTlNG63o",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "Intuition",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "XUlfgJUzGBE",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "Inspiration",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "dD4ZTrpL7uc",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "Infinity",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "8c3mmBM80R4",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "Justice",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "dNSgThdQLi8",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "Time (Five Minutes of Extreme Depression)",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "LVZsyt1nW3Q",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "Meaningless",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "K-pviuKzbrE",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "7th",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "PcFPQ6392wY",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "Rising Tide",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "U_wcCRk-xfE",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "The First Noel [Piano Cover]",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "gnLwB56Nxvs",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "Placid Synths",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "j9FLijbs47A",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "Compressed Fir3",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "jtchSrICwHg",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}, {
+				title: "Comic Punch",
+				artwork: "/img/serenade2small.jpg",
+				ytId: "EnttmZBAiic",
+				appleMusicUrl: "/",
+				spotifyUrl: "/"
+			}
+		];
+
+		$scope.$on('ngRepeatFinished', function (ngRepeatFinishedEvent) {
+			// $('.music-caption').hide();
+			$('.music-gallery-item').mouseenter(function() {
+				$(this).find('.music-caption').fadeIn(100);
+			}).mouseleave(function() {
+				$(this).find('.music-caption').fadeOut(100);
+			});
+		});
+
+		$scope.embedClicked = function(id) {
+			ytmodal.html(`<iframe id="ytplayer" type="text/html"` +
+		  			`src="https://www.youtube.com/embed/${id}?modestbranding=1&controls=0&autoplay=1"` +
+					 `frameborder="0"></iframe>`);
+			ytmodal.fadeIn(100);
+		}
+
+		$('#ytmodal').on('click', function (e) {
+			ytmodal.fadeOut(100, function() {
+				ytmodal.html('');
+			});
+		});
+	});
 })();
