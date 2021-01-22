@@ -182,7 +182,7 @@ header a:hover {
 	justify-content: center;
 }
 
-#ytplayer {
+#ytplayer, #spotifyplayer {
 	width: min(177vh, 100%);
 	height: min(56.25vw, 100%);
 }

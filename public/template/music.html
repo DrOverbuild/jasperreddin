@@ -5,9 +5,9 @@
 		<div class="music-caption" style="display: none">
 			<div>{{song.title}}</div>
 			<div class="music-links">
-				<a class="embedlinks" ng-click="embedClicked(song.ytId)"><img src="/img/social/yt.png"></a>
-				<a href="{{song.appleMusicUrl}}"><img src="/img/social/apple.png"></a>
-				<a href="{{song.spotifyUrl}}"><img src="/img/social/spotify.png"></a>
+				<a class="embedlinks" ng-click="ytClicked(song.ytId)"><img src="/img/social/yt.png"></a>
+				<a ng-show="song.appleMusicUrl" href="{{song.appleMusicUrl}}" target="_blank"><img src="/img/social/apple.png"></a>
+				<a ng-show="song.spotifyUrl" ng-click="spotifyClicked(song.spotifyId)" target="_blank"><img src="/img/social/spotify.png"></a>
 			</div>
 		</div>
 	</div>
