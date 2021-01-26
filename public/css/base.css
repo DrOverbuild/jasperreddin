@@ -11,6 +11,20 @@ body {
     font-size: 1em;
 }
 
+/* ANCHOR TAG */
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    opacity: .5;
+    transition: opacity,color .5s;
+}
+
+a:hover{
+    opacity: 1;
+    text-decoration: none;
+}
+
 /* HOMEPAGE */
 .homepage-central {
     display: flex;
@@ -28,6 +42,7 @@ body {
 .homepage-central a, .social a {
     color: white;
     opacity: .7;
+    font-weight: 300;
 
     text-shadow: 0px 3px 6px 0px black;
 
@@ -41,8 +56,11 @@ body {
 }
 
 .homepage-central h1 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 3rem;
+    opacity: .7;
+    text-shadow: 0px 3px 6px 0px black;
+
 }
 
 .homepage-central h2 {
@@ -155,6 +173,7 @@ header a:hover {
     border-bottom: #444 1px solid;
     text-transform: uppercase;
     transition: background-color,color 0.1s ease-in-out;
+    opacity: 1;
 }
 
 .tab-active, .tab:hover {
@@ -245,11 +264,27 @@ header a:hover {
 .btn-dark-2 {
     background-color: #444;
     color: white;
+    opacity: 1;
 }
 
 .btn-dark-2:hover {
     color: white;
     background-color: #666;
+}
+
+.ratio-16-9 {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.ratio-16-9 iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 }
 
 /* Customize color of the justified gallery loading indicator */

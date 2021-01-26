@@ -68,7 +68,8 @@
             <img class="img-fluid" src="/img/projects/cohoresource.png">
             <p class="pt-3">
                 Formerly cohoresourcebook.org, this website was built with a hand-built PHP template system, MySQL, HTML, CSS, JavaScript (with JQuery).
-                It was built for administrators and interns at the City of Hope Outreach (a local non-profit in Conway, AR) to easily add and manage content
+                It was built for administrators and interns at the <a href="https://www.coho58.org/">City of Hope
+                Outreach</a> (a local non-profit in Conway, AR) to easily add and manage content
                 of the resource app built for iOS and Android. Hosting and data has been migrated to Google Firebase, and there are plans in the works
                 to rebuild the site as a single-page web app using AngularJS.
             </p>
@@ -83,12 +84,74 @@
         <h1>Mobile Projects</h1>
     </div>
 
-    CoHO Resource App
-    Entegrity EnForm
+    <div class="row pr-4 pl-4 pt-5">
+        <div class="col-lg-12">
+            <h2>CoHO Resource App</h2>
+            <img class="img-fluid" src="/img/projects/cohoresourceapp.png">
+            <p class="pt-3">
+                The <a href="https://www.coho58.org/">City of Hope Outreach</a> Resource App was a dream of the Administrating Director of the local non-profit, Ambra McPeters. Based on a book which
+                the organization regularly printed, the app contains a directory of organizations around central Arkansas where people could find help they
+                need. Each resource lists an address, phone, email, hours open, and list of requirements. I volunteered to build the iOS app and the backend.
+                After finishing the iOS app and releasing it to the App Store, I then started the Android app. The iOS verion was built natively using the
+                Swift programming language. The Android port was built using the Flutter API.
+            </p>
+            <p class="text-right">
+                <a href="https://github.com/city-of-hope-outreach/cohoresourceapp-ios" class="btn btn-dark-2" target="_blank">iOS Project GitHub
+                    <i class="fas fa-arrow-right"></i></a>
+            </p>
+
+            <p class="text-right">
+                <a href="https://github.com/city-of-hope-outreach/cohoresourceapp_android" class="btn btn-dark-2" target="_blank">Android Project GitHub
+                    <i class="fas fa-arrow-right"></i></a>
+            </p>
+        </div>
+    </div>
+
+    <div class="row pr-4 pl-4 pt-5">
+        <div class="col-lg-12">
+            <h2>enForm</h2>
+            <img class="img-fluid" src="/img/projects/cohoresourceapp.png">
+            <p class="pt-3">
+                enForm is an iOS Application designed to improve the efficency of on-site engery audits. This application was designed to meet the needs
+                of <a href="https://www.entegritypartners.com">Entegrity Partners</a>. Project led by
+                <a href="https://www.linkedin.com/in/royerramirezruiz/">Royer Ramirez Ruiz</a>. I helped get Royer started with iOS development, and
+                along the way he has contracted me to develop several major features.
+            </p>
+        </div>
+    </div>
 
     <div class="text-center">
         <h1>School Projects</h1>
     </div>
-    ChessGame
+    <div class="row pr-4 pl-4 pt-5">
+        <div class="col-lg-12">
+            <h2>ChessGame</h2>
+            <!-- TODO gotta make this fit the aspect ratio-->
+            <div class="ratio-16-9">
+                <iframe src="https://www.youtube.com/embed/FPpXFF1IPzs?start=305"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+            <p class="pt-3">
+                Built as a team project for CSCI4490, the UCA Computer Science Department capstone course. It is a nearly complete implementation of the game
+                of chess allowing two separate computers to connect to a server, enabling the two players to play against each other on separate computers.
+                It makes use of the Object Server-Client Framework, a TCP framework that allows socket communication of Java serializable objects. The server
+                connects to a MySQL database to keep track of players' login information and statistics.
+            </p>
+            <p>
+                I was the team leader for this project, brainstorming ideas and coordinating work among three other contributors. My main contribution was the
+                game logic. The implementation of chess is not an easy thing to do, with there being several different moves across thousands of conditions.
+                My design was strongly object-oriented, using polymorphism to build an initial list of moves each piece can make regardless of the other pieces
+                on the board. After that list was generated, we eliminated possible moves by checking if the piece was blocked by other pieces. Finally, we
+                removed moves on the board that put the king in check. This last step required us to copy the board in memory, make the hypothetical move, and
+                check if the King is endangered. After that final step, if there were not any moves left for the player, we considered that the end of the game.
+            </p>
+            <p class="text-right">
+                <a href="https://github.com/DrOverbuild/ChessGame" class="btn btn-dark-2" target="_blank">ChessGame GitHub
+                    <i class="fas fa-arrow-right"></i></a>
+            </p>
+        </div>
+    </div>
+
     TicTacToe
 </div>
