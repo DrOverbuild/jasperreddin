@@ -110,7 +110,7 @@
     <div class="row pr-4 pl-4 pt-5">
         <div class="col-lg-12">
             <h2>enForm</h2>
-            <img class="img-fluid" src="/img/projects/cohoresourceapp.png">
+            <img class="img-fluid" src="/img/projects/enform.png">
             <p class="pt-3">
                 enForm is an iOS Application designed to improve the efficency of on-site engery audits. This application was designed to meet the needs
                 of <a href="https://www.entegritypartners.com">Entegrity Partners</a>. Project led by
@@ -126,19 +126,13 @@
     <div class="row pr-4 pl-4 pt-5">
         <div class="col-lg-12">
             <h2>ChessGame</h2>
-            <!-- TODO gotta make this fit the aspect ratio-->
-            <div class="ratio-16-9">
-                <iframe src="https://www.youtube.com/embed/FPpXFF1IPzs?start=305"
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-            </div>
             <p class="pt-3">
                 Built as a team project for CSCI4490, the UCA Computer Science Department capstone course. It is a nearly complete implementation of the game
                 of chess allowing two separate computers to connect to a server, enabling the two players to play against each other on separate computers.
                 It makes use of the Object Server-Client Framework, a TCP framework that allows socket communication of Java serializable objects. The server
                 connects to a MySQL database to keep track of players' login information and statistics.
             </p>
-            <p>
+            <p class="pb-3">
                 I was the team leader for this project, brainstorming ideas and coordinating work among three other contributors. My main contribution was the
                 game logic. The implementation of chess is not an easy thing to do, with there being several different moves across thousands of conditions.
                 My design was strongly object-oriented, using polymorphism to build an initial list of moves each piece can make regardless of the other pieces
@@ -146,8 +140,42 @@
                 removed moves on the board that put the king in check. This last step required us to copy the board in memory, make the hypothetical move, and
                 check if the King is endangered. After that final step, if there were not any moves left for the player, we considered that the end of the game.
             </p>
-            <p class="text-right">
+
+            <p>
+                The multiplayer communication was built using <a href="http://www.site.uottawa.ca/school/research/lloseng/supportMaterial/ocsf/ocsf.html">OCSF</a>,
+                a framework that provides all of the basic TCP/IP socket communication.
+            </p>
+
+            <div class="ratio-16-9">
+                <iframe src="https://www.youtube.com/embed/FPpXFF1IPzs?start=305"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+
+            <p class="text-right pt-3">
                 <a href="https://github.com/DrOverbuild/ChessGame" class="btn btn-dark-2" target="_blank">ChessGame GitHub
+                    <i class="fas fa-arrow-right"></i></a>
+            </p>
+        </div>
+    </div>
+
+    <div class="row pr-4 pl-4 pt-5">
+        <div class="col-lg-12">
+            <h2>TicTacToe</h2>
+            <div class="ratio-16-9">
+                <iframe src="https://www.youtube.com/embed/Z0NQMHf6TJk"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+            <p class="pt-3">
+                One may be thinking, <em>well, anyone can do a TicTacToe game, there's nothing special about that</em>, but the beauty of this project lies in the
+                design of the TCP/IP socket communication between the clients and the server.
+            </p>
+            <p>
+                This was a project for
+            </p>
+            <p class="text-right">
+                <a href="https://github.com/DrOverbuild/JavaTicTacToeMP" class="btn btn-dark-2" target="_blank">TicTacToe GitHub
                     <i class="fas fa-arrow-right"></i></a>
             </p>
         </div>
