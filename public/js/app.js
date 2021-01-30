@@ -21,6 +21,12 @@
                 templateUrl: "template/contact.html",
 				controller:"contactController"
             })
+            .when('/emailsuccess', {
+                templateUrl: "template/emailsuccess.html"
+            })
+            .when('/emailfailure', {
+                templateUrl: "template/emailfailure.html"
+            })
             .otherwise({
                 templateUrl: "template/home.html"
             });
@@ -301,9 +307,20 @@
         });
     });
 
-	app.controller('contactController', function($scope) {
-		$scope.submitContact = function () {
+	app.controller('contactController', function($scope, $http, $location) {
+	    $scope.submitted = false;
 
+		$scope.submitContact = function () {
+		    $scope.submitted = true;
+		    let data = {"contact": $scope.contact}
+            $http.post('https://us-central1-jasperreddin-com.cloudfunctions.net/sendMail', data)
+                .then((response) => {
+                    console.log(response);
+                    $location.path("/emailsuccess");
+                }, (err) => {
+                    console.log(err);
+                    $location.path("/emailfailure");
+                });
 		};
 
 		
