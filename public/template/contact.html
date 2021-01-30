@@ -1,5 +1,48 @@
 <navigation active="'contact'"></navigation>
 
 <div class="container content p-5">
-    <h1>Contact</h1>
+    <h1 class="text-center">Contact</h1>
+	<form name="contactForm" ng-submit="submitContact()">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<input type="text" name="name" placeholder="Name" required ng-model="contact.name">
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<input type="email" name="email" placeholder="Email" required ng-model="contact.email">
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<input type="tel" name="phone" placeholder="Phone" ng-model="contact.phone">
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<textarea name="message" placeholder="Message" ng-model="contact.message" required></textarea>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8 text-right pt-3">
+				<button type="submit" class="btn btn-dark-2" ng-disabled="contactForm.$invalid"
+				 		target="_blank">Send</button>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+
+	</form>
 </div>

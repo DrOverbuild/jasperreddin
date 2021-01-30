@@ -21,7 +21,8 @@
                 templateUrl: "template/films.html"
             })
             .when('/contact', {
-                templateUrl: "template/contact.html"
+                templateUrl: "template/contact.html",
+				controller:"contactController"
             })
             .otherwise({
                 templateUrl: "template/home.html"
@@ -302,4 +303,12 @@
             }
         });
     });
+
+	app.controller('contactController', function($scope) {
+		$scope.submitContact = function () {
+
+		};
+
+		
+	});
 })();
