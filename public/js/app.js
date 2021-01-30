@@ -17,9 +17,6 @@
             .when('/developer/projects', {
                 templateUrl: "template/projects.html"
             })
-            .when('/films', {
-                templateUrl: "template/films.html"
-            })
             .when('/contact', {
                 templateUrl: "template/contact.html",
 				controller:"contactController"
