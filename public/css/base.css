@@ -318,6 +318,10 @@ input[type='email'].ng-touched.ng-invalid, textarea.ng-touched.ng-invalid {
 }
 
 /* RESPONSIVE */
+.mobile-home {
+    display: none;
+}
+
 @media screen and (max-width: 1200px) {
     .music-gallery-item {
         flex-basis: 33%;
@@ -326,10 +330,19 @@ input[type='email'].ng-touched.ng-invalid, textarea.ng-touched.ng-invalid {
 }
 
 @media screen and (max-width: 750px){
+    .homepage-central h1 {
+        font-size: 2rem;
+    }
+
+    .homepage-central h2 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
     .homepage-central {
         display: block;
         text-align: center;
-        padding-top: 4rem;
+        padding-top: 2rem;
     }
 
     .homepage-left {
@@ -337,12 +350,30 @@ input[type='email'].ng-touched.ng-invalid, textarea.ng-touched.ng-invalid {
     }
 
     .homepage-right {
-        padding-top: 4rem;
+        padding-top: 2rem;
         text-align: center;
+    }
+
+    #logoimghome {
+        height: 175px;
     }
 
     .music-gallery-item {
         flex-basis: 50%;
         height: 50vw;
+    }
+
+    #nav .nav-item {
+        display: none;
+    }
+
+    #nav:hover .nav-item {
+        display: block;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .mobile-home {
+        display: block;
     }
 }
