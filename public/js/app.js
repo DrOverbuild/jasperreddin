@@ -309,9 +309,11 @@
 
 	app.controller('contactController', function($scope, $http, $location) {
 	    $scope.submitted = false;
+	    $scope.sendText = "Send";
 
 		$scope.submitContact = function () {
 		    $scope.submitted = true;
+		    $scope.sendText = "Sending..."
 		    let data = {"contact": $scope.contact}
             $http.post('https://us-central1-jasperreddin-com.cloudfunctions.net/sendMail', data)
                 .then((response) => {
