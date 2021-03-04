@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "jasperreddin-com",
     "public": "public",
     "ignore": [
       "firebase.json",
